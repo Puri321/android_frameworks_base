@@ -203,7 +203,7 @@ public class PhoneStatusBarView extends PanelBar {
         mBar.makeExpandedInvisibleSoon();
         mFadingPanel = null;
         mLastFullyOpenedPanel = null;
-        if (mScrimColor != 0 && ActivityManager.isHighEndGfx()) {
+        if (mScrimColor != 0 && (ActivityManager.isHighEndGfx() || PhoneStatusBar.FORCE_TRANSLUCENT)) {
             mBar.mStatusBarWindow.setBackgroundColor(0);
         }
     }
